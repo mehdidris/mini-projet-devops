@@ -1,0 +1,32 @@
+
+#rockButton {
+width: 120px;
+    height: 120px;
+    font-size: 2rem;
+    margin: 2rem auto;
+}
+.rock-image {
+    position: fixed;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid rgb(41, 156, 135);
+    object-fit: cover;
+    cursor: grab;
+    z-index: 1000;
+    animation: rockAppear 0.5s ease-out forwards;
+    pointer-events: auto;
+}
+@keyframes rockAppear {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2) rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
