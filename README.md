@@ -1,8 +1,8 @@
-#Voici toute les etapes qu on a suivie pour faire le projet devops : 
+# Voici toute les etapes qu on a suivie pour faire le projet devops : 
 
 
 
-#Etape 1 :  ( Creation d un site statique et le push dans github )
+# Etape 1 :  ( Creation d un site statique et le push dans github )
 - Creer un site statique ( html , css , js )
 
 - Creer un depot dans github ( mini-projet-devops )
@@ -11,7 +11,7 @@
 
 
 
-#Etape 2 : ( mettre le site dans docker et push dans github ) 
+# Etape 2 : ( mettre le site dans docker et push dans github ) 
 - Poul notre depot dans notre environement de travaile ( kali linux )
 
 - aller dans le dossier mini-projet-devops car c est la ou on va faire toute nos commande
@@ -41,7 +41,7 @@ EXPOSE 80 ( indique que le conteneur écoute sur le port 80 )
 
 
 
-#Etape 3 : ( push le nouveau dossier dans github ) 
+# Etape 3 : ( push le nouveau dossier dans github ) 
 - push le dossier mini-projet-devops dans github avec les commandes suivante
 
 - git init
