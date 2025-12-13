@@ -85,6 +85,9 @@ EXPOSE 80 ( indique que le conteneur écoute sur le port 80 )
 - Preuve du CI/CD :
 <img width="1340" height="638" alt="image" src="https://github.com/user-attachments/assets/a9b4f4c9-cdf2-4cd8-9d72-4ce137bb14f2" />
 
+<img width="1360" height="548" alt="image" src="https://github.com/user-attachments/assets/797d56a3-0839-4557-8b3a-4584607c11f8" />
+
+
 - Preuve du site marche :
 <img width="1296" height="519" alt="image" src="https://github.com/user-attachments/assets/0fe9bfc4-f32d-4c14-9903-79671c5a22aa" />
 
