@@ -14,15 +14,15 @@
 # Etape 2 : ( mettre le site dans docker et push dans github ) 
 - Pull notre depot dans notre environement de travaile ( kali linux )
 
-- aller dans le dossier mini-projet-devops car c est la ou on va faire toute nos commande
+- Aller dans le dossier mini-projet-devops car c est la ou on va faire toute nos commande
 
 - cd mini-projet-devops 
 
-- creer le dockerfile et verifier qu il est bien dans notre dossier
+- Creer le dockerfile et verifier qu il est bien dans notre dossier
 
 - mkdir dockerfile
 
-- nano dockerfile  ( on va ecrire les commande suivante ) :
+- Nano dockerfile  ( on va ecrire les commande suivante ) :
 FROM nginx:alpine ( Prend l’image officielle de Nginx basée sur Alpine Linux )
 
 RUN rm -rf /usr/share/nginx/html/* ( Cette commande supprime le contenu par défaut du dossier )
@@ -31,21 +31,22 @@ COPY . /usr/share/nginx/html ( copie tout le site (HTML, CSS, JS) dans le dossie
 
 EXPOSE 80 ( indique que le conteneur écoute sur le port 80 )
 
-- constuire l image docker
-- docker build -t projet-devops
+- Constuire l image docker
+- Docker build -t projet-devops
 
-- lancer le contenaire docker dans le port 80 et voir si tout marche bien 
-- docker run -d -p 8080:80 mon-site
+- Lancer le contenaire docker dans le port 80 et voir si tout marche bien 
+- Docker run -d -p 8080:80 mon-site
 
-- verifier si le contenaire existe
-- docker ps
+- Verifier si le contenaire existe
+- Docker ps
+- Docker images
 
 
 
 
 # Etape 3 : ( faire la papeline CI/CD ) 
-- creer un fichier appeller .github puis a l interieur un fichier workflow puis a l interieur un fichier avec le code en yml
-- le code CI/CD doit se derouler de la maniere suivante :
+- Creer un fichier appeller .github puis a l interieur un fichier workflow puis a l interieur un fichier avec le code en yml
+- Le code CI/CD doit se derouler de la maniere suivante :
 - Le code se pousse sur main ou pull request creee
 
 - Job build-and-test
@@ -70,7 +71,7 @@ EXPOSE 80 ( indique que le conteneur écoute sur le port 80 )
 
 
 # Etape 4: ( push le nouveau dossier dans github ) 
-- push le dossier mini-projet-devops dans github avec les commandes suivante
+- Push le dossier mini-projet-devops dans github avec les commandes suivante
 
 - git init
 - git add .
@@ -79,7 +80,28 @@ EXPOSE 80 ( indique que le conteneur écoute sur le port 80 )
 - git push
 
 
+# Les screens demanders : 
+
+- Preuve du CI/CD :
+<img width="1340" height="638" alt="image" src="https://github.com/user-attachments/assets/a9b4f4c9-cdf2-4cd8-9d72-4ce137bb14f2" />
+
+- Preuve du site marche :
+<img width="1296" height="519" alt="image" src="https://github.com/user-attachments/assets/0fe9bfc4-f32d-4c14-9903-79671c5a22aa" />
+
+- Preuve de l image docker :
+<img width="712" height="230" alt="image" src="https://github.com/user-attachments/assets/9dec7e3d-d972-4740-8602-4396e955dda8" />
 
 
 
+# Les problemes que nous avons rencontrer  :
+
+- Nous avons fait une erreur a la place d apeller le fichier index ( inex )
+
+- Pour la commande docker build il faut mettre le nom en miniscule
+
+- Ne pas oublier le . a la fin de la commande pour le build
+
+- Nous avons pas verifier que notre collegue nous a ajouter dans le depot github avant de push
+
+- Une erreur de synchronisation entre le docker file et le yml 
 
