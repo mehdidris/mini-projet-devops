@@ -22,11 +22,11 @@ jobs:
       
       - name: Test site files in source
         run: |
-          if [ ! -f inex.html ]; then
+          if [ ! -f index.html ]; then
             echo "ERREUR : inex.html manquant"
             exit 1
           fi
-          echo "Le fichier inex.html existe"
+          echo "Le fichier index.html existe"
       
       - name: Test Docker container
         run: |
